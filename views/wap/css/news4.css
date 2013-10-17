@@ -1,0 +1,27 @@
+
+#cate2{
+	background: url(../img/bg004.jpg) #E2E3E6;
+	background-size:256px auto;
+ 	overflow-x: hidden;
+
+}
+.item {
+width: 48%;
+display: block;
+padding: 1%;
+background: inherit;
+border: none;
+height: 78px;
+float: left;
+background: #00CCFF;
+}
+
+.item-title {
+font-size: 30px;
+color: rgb(255, 255, 255);
+}
+
+._C0 {
+height: 156px;
+background: #FC5F56;
+}

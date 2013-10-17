@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^([a-zA-Z_0-9-/]+)\.html$ index.php?repparam=$1
+ErrorDocument 404 /Error.php
+#rewriteCond %{http_host} ^www.im61.com[NC]
+#rewriteRule ^(.*)$ http://www.im61.com/$1 [R=301,L]
+</IfModule>

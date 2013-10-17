@@ -1,0 +1,33 @@
+
+/*cate1*/
+#cate1{background-color: white;overflow-x: hidden;}
+#cate1 .mainmenu {
+	display: block;
+    margin: 0 auto;
+    padding:0 0 5px 5px;
+   
+}
+	#cate1 .mainmenu li {
+		width:33%;
+		float:left;
+		display: block;
+		-moz-user-select:none;
+		-webkit-user-select:none;
+		-ms-user-select:none;
+	}
+
+
+#cate1 .mainmenu li .menubtn .menuimg {
+	height:106px;
+	max-height:106px;
+	overflow:hidden;
+ 
+	background-color: #14191B;
+} 
+ /*圆角作用*/
+#cate1 .mainmenu li div img {
+	border:0;
+	width:100%;
+
+}  
+/*让图片适应整个*/

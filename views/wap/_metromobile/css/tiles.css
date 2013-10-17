@@ -1,0 +1,644 @@
+/*----------------------------------------------------------
+/* Webbu Tile CSS v.1
+/*
+-----------------------------------------------------------*/
+
+/* General tile settings */
+.videotile{width:100%; height:100%; margin:0px; border:0px;}
+.maptile{width:100%; height:100%; margin:0px; border:0px;}
+.tile{ display:block;  float:left;  background-color:#525252;  width:150px;  height:150px;  cursor:pointer;  box-shadow:inset 0px 0px 1px #FFC;  text-decoration:none;  color:#fff;  overflow:hidden;  position:relative;  font-weight:300;  font-size:11pt;  letter-spacing:0.02em;  line-height:20px;  margin:0 10px 10px 0;  overflow:hidden}
+.tile:hover{ outline:3px #3a3a3a solid}
+.tile .boxContent{ width:100%;  height:100%;  padding:0;  padding-bottom:30px;  vertical-align:top;  padding:10px 15px;  overflow:hidden;  text-overflow:ellipsis;  position:relative;  font-weight:400;  font-size:9pt;  color:#000;  color:#fff;  line-height:16px}
+.tile .boxContent:hover{ color:rgba(0,0,0,0.8)}
+.tile .boxContent:active{ color:rgba(0,0,0,0.4)}
+.tile .boxContent:hover{ color:#fff}
+.tile.icon .boxContent{ padding:0}
+.tile.icon .boxContent img{ position:absolute;  width:64px;  height:64px;  top:50%;  left:50%;  margin-left:-32px;  margin-top:-32px}
+.tile.image .boxContent, 
+.tile.islider .boxContent{ padding:0}
+.tile.image .boxContent img, 
+.tile.islider .boxContent img{ width:100%;  height:auto;  min-height:100%;  max-width:100%}
+.tile .tilename{ position:absolute;  bottom:0;  left:0;  right:0;  min-height:22px;  *zoom:1}
+.tile .tilename:before, 
+.tile .tilename:after{ display:table;  content:""}
+.tile .tilename:after{ clear:both}
+.tile .tilename .name{ position:absolute;  bottom:0;  left:0;  margin-bottom:5px;  margin-left:15px;  font-weight:400;  font-size:9pt;  color:#fff}
+.tile .tilename .name:hover{ color:#fff}
+.tile .tilename .icon{ margin:5px 15px;  width:32px;  height:32px}
+.tile .tilename .icon img{ width:100%;  height:100%}
+.tile .tilename .text{ position:absolute;  left:60px;  top:5px;  right:50px;  font-weight:400;  font-size:9pt;  color:#000;  color:#fff;  line-height:14px}
+.tile .tilename .text:hover{ color:rgba(0,0,0,0.8)}
+.tile .tilename .text:active{ color:rgba(0,0,0,0.4)}
+.tile .tilename .text:hover{ color:#fff}
+
+/* Tile responsive setting. */
+@media (min-width:1025px){ 
+ 
+ .wrapper{width:1024px; margin-left:auto; margin-right:auto}
+}
+ .resimgicon {max-width:62px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 3em; margin-top: 2.7em;}
+ .tile{ width:157px;  height:157px}
+ .tile.double{ width:324px}
+ .tile.double .boxContent{ width:324px}
+ .tile.triple{ width:491px}
+ .tile.triple .boxContent{ width:491px}
+ .tile.quadro{ width:658px}
+ .tile.quadro .boxContent{ width:658px}
+ .tile.double-v{ height:324px}
+ .tile.double-v .boxContent{ height:284px}
+ .tile.triple-v{ height:491px}
+ .tile.triple-v .boxContent{ height:451px}
+ .tile.quadro-v{ height:658px}
+ .tile.quadro-v .boxContent{ height:658px}
+ .tile.double-box{ height:324px; width:324px}
+ .tile.double-box .boxContent{ height:324px; width:324px}
+ .tile.triple-box{ height:491px; width:491px}
+ .tile.triple-box .boxContent{ height:491px; width:491px}
+ .tile.triple-double-box{ height:503px; width:332px}
+ .tile.triple-double-box .boxContent{ height:491px; width:332px}
+ .tile.quadro-box{ height:658px; width:658px}
+ .tile.quadro-box .boxContent{ height:658px; width:658px}
+ .tile.quadro-double-box-v{ height:658px; width:324px}
+ .tile.quadro-double-box-v .boxContent{ height:658px; width:324px}
+ .tile.quadro-double-box{ height:324px; width:658px}
+ .tile.quadro-double-box .boxContent{ height:324px; width:658px}
+ 
+ .tile .tilename { min-height: 30px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:72px;  margin-left:35px;  margin-top:39px;  display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:10px; margin-bottom:8px; font-size:12pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:5px; margin-right:5px; margin-bottom:3px; margin-left:10px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+
+@media (max-width:1024px){ 
+ .resimgicon {max-width:62px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 3.28em; margin-top: 3em;}
+ .tile{ width:159px;  height:159px}
+ .tile.double{ width:328px}
+ .tile.double .boxContent{ width:328px}
+ .tile.triple{ width:497px}
+ .tile.triple .boxContent{ width:497px}
+ .tile.quadro{ width:666px}
+ .tile.quadro .boxContent{ width:666px}
+ .tile.double-v{ height:328px}
+ .tile.double-v .boxContent{ height:288px}
+ .tile.triple-v{ height:497px}
+ .tile.triple-v .boxContent{ height:457px}
+ .tile.quadro-v{ height:666px}
+ .tile.quadro-v .boxContent{ height:626px}
+ .tile.double-box{ height:328px; width:328px}
+ .tile.double-box .boxContent{ height:328px; width:328px}
+ .tile.triple-box{ height:497px; width:497px}
+ .tile.triple-box .boxContent{ height:497px; width:497px}
+ .tile.triple-double-box{ height:328px; width:497px}
+ .tile.triple-double-box .boxContent{ height:328px; width:497px}
+ .tile.quadro-box{ height:666px; width:666px}
+ .tile.quadro-box .boxContent{ height:666px; width:666px}
+ .tile.quadro-double-box-v{ height:666px; width:328px}
+ .tile.quadro-double-box-v .boxContent{ height:666px; width:328px}
+ .tile.quadro-double-box{ height:328px; width:666px}
+ .tile.quadro-double-box .boxContent{ height:328px; width:666px}
+ 
+ .tile .tilename { min-height: 30px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:72px;  margin-left:37px;  margin-top:44px;  display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:10px; margin-bottom:5px; font-size:12pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:12px; margin-right:5px; margin-bottom:5px; margin-left:5px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+@media (max-width:980px){ 
+ .resimgicon {max-width:66px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 4em; margin-top: 3em;}
+ .tile{ width:180px;  height:180px}
+ .tile.double{ width:370px}
+ .tile.double .boxContent{ width:370px}
+ .tile.triple{ width:560px}
+ .tile.triple .boxContent{ width:560px}
+ .tile.quadro{ width:750px}
+ .tile.quadro .boxContent{ width:750px}
+ .tile.double-v{ height:370px}
+ .tile.double-v .boxContent{ height:330px}
+ .tile.triple-v{ height:560px}
+ .tile.triple-v .boxContent{ height:520px}
+ .tile.quadro-v{ height:750px}
+ .tile.quadro-v .boxContent{ height:710px}
+ .tile.double-box{ height:370px; width:370px}
+ .tile.double-box .boxContent{ height:370px; width:370px}
+ .tile.triple-box{ height:560px; width:560px}
+ .tile.triple-box .boxContent{ height:560px; width:560px}
+ .tile.triple-double-box{ height:370px; width:560px}
+ .tile.triple-double-box .boxContent{ height:370px; width:560px}
+ .tile.quadro-box{ height:750px; width:750px}
+ .tile.quadro-box .boxContent{ height:750px; width:750px}
+ .tile.quadro-double-box-v{ height:750px; width:370px}
+ .tile.quadro-double-box-v .boxContent{ height:750px; width:370px}
+ .tile.quadro-double-box{ height:370px; width:750px}
+ .tile.quadro-double-box .boxContent{ height:370px; width:750px}
+ 
+ .tile .tilename { min-height: 30px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:72px;  margin-left:48px;  margin-top:49px;  display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:10px; margin-bottom:5px; font-size:12pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:12px; margin-right:5px; margin-bottom:5px; margin-left:5px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+/* For ipad landscape */
+@media (max-width:768px){ 
+ .resimgicon {max-width:64px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 3.85em; margin-top: 3em;}
+ .tile{ width:177px;  height:177px}
+ .tile.double{ width:364px}
+ .tile.double .boxContent{ width:364px}
+ .tile.triple{ width:551px}
+ .tile.triple .boxContent{ width:551px}
+ .tile.quadro{ width:738px}
+ .tile.quadro .boxContent{ width:738px}
+ .tile.double-v{ height:364px}
+ .tile.double-v .boxContent{ height:278px}
+ .tile.triple-v{ height:551px}
+ .tile.triple-v .boxContent{ height:442px}
+ .tile.quadro-v{ height:738px}
+ .tile.quadro-v .boxContent{ height:738px}
+ .tile.double-box{ height:364px; width:364px}
+ .tile.double-box .boxContent{ height:364px; width:364px}
+ .tile.triple-box{ height:551px; width:551px}
+ .tile.triple-box .boxContent{ height:551px; width:551px}
+ .tile.triple-double-box{ height:364px; width:551px}
+ .tile.triple-double-box .boxContent{ height:364px; width:551px}
+ .tile.quadro-box{ height:738px; width:738px}
+ .tile.quadro-box .boxContent{ height:738px; width:738px}
+ .tile.quadro-double-box-v{ height:738px; width:364px}
+ .tile.quadro-double-box-v .boxContent{ height:738px; width:364px}
+ .tile.quadro-double-box{ height:364px; width:738px}
+ .tile.quadro-double-box .boxContent{ height:364px; width:738px}
+ 
+ .tile .tilename { min-height: 30px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:72px;  margin-left:47px;  margin-top:44px; display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:10px; margin-bottom:5px; font-size:12pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:12px; margin-right:5px; margin-bottom:5px; margin-left:5px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+ .tile-group{ max-width:400px;  float:none}
+}
+
+@media (max-width:720px){ 
+ .resimgicon {max-width:64px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 3.6em; margin-top: 3em;}
+ .tile{ width:165px;  height:165px}
+ .tile.double{ width:340px}
+ .tile.double .boxContent{ width:340px}
+ .tile.triple{ width:515px}
+ .tile.triple .boxContent{ width:515px}
+ .tile.quadro{ width:690px}
+ .tile.quadro .boxContent{ width:690px}
+ .tile.double-v{ height:340px}
+ .tile.double-v .boxContent{ height:300px}
+ .tile.triple-v{ height:515px}
+ .tile.triple-v .boxContent{ height:475px}
+ .tile.quadro-v{ height:690px}
+ .tile.quadro-v .boxContent{ height:650px}
+ .tile.double-box{ height:340px; width:340px}
+ .tile.double-box .boxContent{ height:340px; width:340px}
+ .tile.triple-box{ height:515px; width:515px}
+ .tile.triple-box .boxContent{ height:515px; width:515px}
+ .tile.triple-double-box{ height:340px; width:515px}
+ .tile.triple-double-box .boxContent{ height:340px; width:515px}
+ .tile.quadro-box{ height:690px; width:690px}
+ .tile.quadro-box .boxContent{ height:690px; width:690px}
+ .tile.quadro-double-box-v{ height:690px; width:340px}
+ .tile.quadro-double-box-v .boxContent{ height:690px; width:340px}
+ .tile.quadro-double-box{ height:340px; width:690px}
+ .tile.quadro-double-box .boxContent{ height:340px; width:690px}
+ 
+ .tile .tilename { min-height: 30px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:72px;  margin-left:47px;  margin-top:44px; display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:10px; margin-bottom:5px; font-size:12pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:12px; margin-right:5px; margin-bottom:5px; margin-left:5px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+ .tile-group{ max-width:400px;  float:none}
+}
+/* For Samsung galaxy s3 landscape */
+@media (max-width:640px){ 
+ .resimgicon {max-width:64px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 2.7em; margin-top: 2.8em;}
+ .tile{ width:147px;  height:147px}
+ .tile.double{ width:304px}
+ .tile.double .boxContent{ width:304px}
+ .tile.triple{ width:461px}
+ .tile.triple .boxContent{ width:461px}
+ .tile.quadro{ width:618px}
+ .tile.quadro .boxContent{ width:618px}
+ .tile.double-v{ height:304px}
+ .tile.double-v .boxContent{ height:264px}
+ .tile.triple-v{ height:461px}
+ .tile.triple-v .boxContent{ height:421px}
+ .tile.quadro-v{ height:618px}
+ .tile.quadro-v .boxContent{ height:578px}
+ .tile.double-box{ height:304px; width:304px}
+ .tile.double-box .boxContent{ height:304px; width:304px}
+ .tile.triple-box{ height:461px; width:461px}
+ .tile.triple-box .boxContent{ height:461px; width:461px}
+ .tile.triple-double-box{ height:304px; width:461px}
+ .tile.triple-double-box .boxContent{ height:304px; width:461px}
+ .tile.quadro-box{ height:618px; width:618px}
+ .tile.quadro-box .boxContent{ height:618px; width:618px}
+ .tile.quadro-double-box-v{ height:618px; width:304px}
+ .tile.quadro-double-box-v .boxContent{ height:618px; width:304px}
+ .tile.quadro-double-box{ height:304px; width:618px}
+ .tile.quadro-double-box .boxContent{ height:304px; width:618px}
+ 
+ .tile .tilename { min-height: 30px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:72px;  margin-left:30px;  margin-top:44px; display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:10px; margin-bottom:5px; font-size:12pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:12px; margin-right:5px; margin-bottom:5px; margin-left:5px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+ .tile-group{ max-width:400px;  float:none}
+}
+
+@media (max-width:598px){ 
+ .resimgicon {max-width:36px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 1.26em; margin-top: .83em;}
+ .tile{ width:88px;  height:88px}
+ .tile.double{ width:186px}
+ .tile.double .boxContent{ width:186px}
+ .tile.triple{ width:284px}
+ .tile.triple .boxContent{ width:284px}
+ .tile.quadro{ width:382px}
+ .tile.quadro .boxContent{ width:382px}
+ .tile.double-v{ height:186px}
+ .tile.double-v .boxContent{ height:146px}
+ .tile.triple-v{ height:284px}
+ .tile.triple-v .boxContent{ height:244px}
+ .tile.quadro-v{ height:382px}
+ .tile.quadro-v .boxContent{ height:342px}
+ .tile.double-box{ height:186px; width:186px}
+ .tile.double-box .boxContent{ height:186px; width:186px}
+ .tile.triple-box{ height:284px; width:284px}
+ .tile.triple-box .boxContent{ height:284px; width:284px}
+ .tile.triple-double-box{ height:186px; width:284px}
+ .tile.triple-double-box .boxContent{ height:186px; width:284px}
+ .tile.quadro-box{ height:382px; width:382px}
+ .tile.quadro-box .boxContent{ height:382px; width:382px}
+ .tile.quadro-double-box-v{ height:382px; width:186px}
+ .tile.quadro-double-box-v .boxContent{ height:382px; width:186px}
+ .tile.quadro-double-box{ height:186px; width:382px}
+ .tile.quadro-double-box .boxContent{ height:186px; width:382px}
+ 
+ .tile .tilename { min-height: 20px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{font-size:36px; margin-left:.46em; margin-top:15px; display:inline-block; text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:0px; font-size:8pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:2px; margin-right:5px; margin-bottom:5px; margin-left:5px; font-size:12px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+@media (max-width:592px){
+ .resimgicon {max-width:36px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 1.25em; margin-top: .83em;}
+ .tile{ width:87px;  height:87px}
+ .tile.double{ width:184px}
+ .tile.double .boxContent{ width:184px}
+ .tile.triple{ width:281px}
+ .tile.triple .boxContent{ width:281px}
+ .tile.quadro{ width:378px}
+ .tile.quadro .boxContent{ width:378px}
+ .tile.double-v{ height:184px}
+ .tile.double-v .boxContent{ height:144px}
+ .tile.triple-v{ height:281px}
+ .tile.triple-v .boxContent{ height:241px}
+ .tile.quadro-v{ height:378px}
+ .tile.quadro-v .boxContent{ height:348px}
+ .tile.double-box{ height:184px; width:184px}
+ .tile.double-box .boxContent{ height:184px; width:184px}
+ .tile.triple-box{ height:281px; width:281px}
+ .tile.triple-box .boxContent{ height:281px; width:281px}
+ .tile.triple-double-box{ height:184px; width:281px}
+ .tile.triple-double-box .boxContent{ height:184px; width:281px}
+ .tile.quadro-box{ height:378px; width:378px}
+ .tile.quadro-box .boxContent{ height:378px; width:378px}
+ .tile.quadro-double-box-v{ height:378px; width:184px}
+ .tile.quadro-double-box-v .boxContent{ height:378px; width:184px}
+ .tile.quadro-double-box{ height:184px; width:378px}
+ .tile.quadro-double-box .boxContent{ height:184px; width:378px}
+ 
+ .tile .tilename { min-height: 20px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{font-size:36px; margin-left:.48em; margin-top:15px; display:inline-block; text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:0px; font-size:8pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:2px; margin-right:5px; margin-bottom:5px; margin-left:5px; font-size:12px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+/* For iphone 5 landscape */
+@media (max-width:568px){ 
+ .resimgicon {max-width:36px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: .99em; margin-top: .82em;}
+ .tile{ width:83px;  height:83px}
+ .tile.double{ width:176px}
+ .tile.double .boxContent{ width:176px}
+ .tile.triple{ width:269px}
+ .tile.triple .boxContent{ width:269px}
+ .tile.quadro{ width:362px}
+ .tile.quadro .boxContent{ width:362px}
+ .tile.double-v{ height:176px}
+ .tile.double-v .boxContent{ height:136px}
+ .tile.triple-v{ height:269px}
+ .tile.triple-v .boxContent{ height:229px}
+ .tile.quadro-v{ height:362px}
+ .tile.quadro-v .boxContent{ height:342px}
+ .tile.double-box{ height:176px; width:176px}
+ .tile.double-box .boxContent{ height:176px; width:176px}
+ .tile.triple-box{ height:269px; width:269px}
+ .tile.triple-box .boxContent{ height:269px; width:269px}
+ .tile.triple-double-box{ height:176px; width:269px}
+ .tile.triple-double-box .boxContent{ height:176px; width:269px}
+ .tile.quadro-box{ height:362px; width:362px}
+ .tile.quadro-box .boxContent{ height:362px; width:362px}
+ .tile.quadro-double-box-v{ height:362px; width:176px}
+ .tile.quadro-double-box-v .boxContent{ height:362px; width:176px}
+ .tile.quadro-double-box{ height:176px; width:362px}
+ .tile.quadro-double-box .boxContent{ height:176px; width:362px}
+ 
+ .tile .tilename { min-height: 25px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:36px;  margin-left:.46em;  margin-top:15px; display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:3px; font-size:9pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:12px; margin-right:5px; margin-bottom:5px; margin-left:5px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+ .tile-group{ max-width:400px;  float:none}
+}
+
+/* galaxy s2 landscape */
+@media (max-width:533px){ 
+ .resimgicon {max-width:38px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: .74em; margin-top: .68em;}
+ .tile{ width:77px;  height:77px}
+ .tile.t2x{ width:164px}
+ .tile.t2x .boxContent{ width:164px}
+ .tile.t3x{ width:251px}
+ .tile.t3x .boxContent{ width:251px}
+ .tile.t4x{ width:338px}
+ .tile.t4x .boxContent{ width:338px}
+ .tile.t2x-v{ height:164px}
+ .tile.t2x-v .boxContent{ height:124px}
+ .tile.t3x-v{ height:251px}
+ .tile.t3x-v .boxContent{ height:211px}
+ .tile.t4x-v{ height:338px}
+ .tile.t4x-v .boxContent{ height:298px}
+ .tile.t2x-b{ height:164px; width:164px}
+ .tile.t2x-b .boxContent{ height:164px; width:164px}
+ .tile.t3x-b{ height:251px; width:251px}
+ .tile.t3x-b .boxContent{ height:251px; width:251px}
+ .tile.t3x-t2x-b{ height:164px; width:251px}
+ .tile.t3x-t2x-b .boxContent{ height:164px; width:251px}
+ .tile.t4x-b{ height:338px; width:338px}
+ .tile.t4x-b .boxContent{ height:338px; width:338px}
+ .tile.t4x-t2x-b{ height:338px; width:164px}
+ .tile.t4x-t2x-b .boxContent{ height:338px; width:164px}
+ .tile.t4x-t2x22-b{ height:164px; width:338px}
+ .tile.t4x-t2x22-b .boxContent{ height:164px; width:338px}
+ .tile.t4x-t1x-b{ height:77px; width:338px}
+ .tile.t4x-t1x-b .boxContent{ height:77px; width:338px}
+ 
+ .tile .tilename { min-height: 20px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{font-size:36px; margin-left:.35em; margin-top:23px; display:inline-block; text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:0px; font-size:8pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:2px; margin-right:5px; margin-bottom:5px; margin-left:5px; font-size:12px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+@media (max-width:520px){ 
+ .resimgicon {max-width:48px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 2em; margin-top: 1.6em;}
+ .tile{ width:117px;  height:117px}
+ .tile.double{ width:244px}
+ .tile.double .boxContent{ width:244px}
+ .tile.triple{ width:371px}
+ .tile.triple .boxContent{ width:371px}
+ .tile.quadro{ width:498px}
+ .tile.quadro .boxContent{ width:498px}
+ .tile.double-v{ height:244px}
+ .tile.double-v .boxContent{ height:204px}
+ .tile.triple-v{ height:371px}
+ .tile.triple-v .boxContent{ height:341px}
+ .tile.quadro-v{ height:498px}
+ .tile.quadro-v .boxContent{ height:458px}
+ .tile.double-box{ height:244px; width:244px}
+ .tile.double-box .boxContent{ height:244px; width:244px}
+ .tile.triple-box{ height:371px; width:371px}
+ .tile.triple-box .boxContent{ height:371px; width:371px}
+ .tile.triple-double-box{ height:244px; width:371px}
+ .tile.triple-double-box .boxContent{ height:244px; width:371px}
+ .tile.quadro-box{ height:498px; width:498px}
+ .tile.quadro-box .boxContent{ height:498px; width:498px}
+ .tile.quadro-double-box-v{ height:498px; width:244px}
+ .tile.quadro-double-box-v .boxContent{ height:498px; width:244px}
+ .tile.quadro-double-box{ height:244px; width:498px}
+ .tile.quadro-double-box .boxContent{ height:244px; width:498px}
+ 
+ .tile .tilename { min-height: 25px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{ font-size:50px;  margin-left:.48em;  margin-top:28px; display:inline-block;  text-decoration:inherit}
+ .tile .tilename .name{ margin-left:10px; margin-bottom:5px; font-size:12pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:12px; margin-right:5px; margin-bottom:5px; margin-left:5px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+ .tile-group{ max-width:400px;  float:none}
+}
+
+@media (max-width:480px){
+ .resimgicon {max-width:34px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: .48em; margin-top: .64em;}
+ .tile{ width:68px;  height:68px}
+ .tile.double{ width:146px}
+ .tile.double .boxContent{ width:146px}
+ .tile.triple{ width:224px}
+ .tile.triple .boxContent{ width:224px}
+ .tile.quadro{ width:302px}
+ .tile.quadro .boxContent{ width:302px}
+ .tile.double-v{ height:146px}
+ .tile.double-v .boxContent{ height:106px}
+ .tile.triple-v{ height:224px}
+ .tile.triple-v .boxContent{ height:184px}
+ .tile.quadro-v{ height:302px}
+ .tile.quadro-v .boxContent{ height:382px}
+ .tile.double-box{ height:146px; width:146px}
+ .tile.double-box .boxContent{ height:146px; width:146px}
+ .tile.triple-box{ height:224px; width:224px}
+ .tile.triple-box .boxContent{ height:224px; width:224px}
+ .tile.triple-double-box{ height:146px; width:224px}
+ .tile.triple-double-box .boxContent{ height:146px; width:224px}
+ .tile.quadro-box{ height:302px; width:302px}
+ .tile.quadro-box .boxContent{ height:302px; width:302px}
+ .tile.quadro-double-box-v{ height:302px; width:146px}
+ .tile.quadro-double-box-v .boxContent{ height:302px; width:146px}
+ .tile.quadro-double-box{ height:146px; width:302px}
+ .tile.quadro-double-box .boxContent{ height:146px; width:302px}
+ 
+ .tile .tilename { min-height: 20px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{font-size:36px; margin-left:.20em; margin-top:12px; display:inline-block; text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:0px; font-size:8pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:2px; margin-right:5px; margin-bottom:5px; margin-left:5px; font-size:12px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+/*Galaxy Note */
+@media (max-width:400px){
+ .resimgicon {max-width:36px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: 1.25em; margin-top: .83em;}
+ .tile{ width:87px;  height:87px}
+ .tile.double{ width:184px}
+ .tile.double .boxContent{ width:184px}
+ .tile.triple{ width:281px}
+ .tile.triple .boxContent{ width:281px}
+ .tile.quadro{ width:378px}
+ .tile.quadro .boxContent{ width:378px}
+ .tile.double-v{ height:184px}
+ .tile.double-v .boxContent{ height:144px}
+ .tile.triple-v{ height:281px}
+ .tile.triple-v .boxContent{ height:241px}
+ .tile.quadro-v{ height:378px}
+ .tile.quadro-v .boxContent{ height:348px}
+ .tile.double-box{ height:184px; width:184px}
+ .tile.double-box .boxContent{ height:184px; width:184px}
+ .tile.triple-box{ height:281px; width:281px}
+ .tile.triple-box .boxContent{ height:281px; width:281px}
+ .tile.triple-double-box{ height:184px; width:281px}
+ .tile.triple-double-box .boxContent{ height:184px; width:281px}
+ .tile.quadro-box{ height:378px; width:378px}
+ .tile.quadro-box .boxContent{ height:378px; width:378px}
+ .tile.quadro-double-box-v{ height:378px; width:184px}
+ .tile.quadro-double-box-v .boxContent{ height:378px; width:184px}
+ .tile.quadro-double-box{ height:184px; width:378px}
+ .tile.quadro-double-box .boxContent{ height:184px; width:378px}
+ 
+ .tile .tilename { min-height: 20px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{font-size:36px; margin-left:.48em; margin-top:18px; display:inline-block; text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:0px; font-size:8pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:2px; margin-right:5px; margin-bottom:5px; margin-left:5px; font-size:12px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+
+@media (max-width:360px){ 
+ .resimgicon {max-width:38px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: .74em; margin-top: .68em;}
+ .tile{ width:77px;  height:77px}
+ .tile.double{ width:164px}
+ .tile.double .boxContent{ width:164px}
+ .tile.triple{ width:251px}
+ .tile.triple .boxContent{ width:251px}
+ .tile.quadro{ width:338px}
+ .tile.quadro .boxContent{ width:338px}
+ .tile.double-v{ height:164px}
+ .tile.double-v .boxContent{ height:124px}
+ .tile.triple-v{ height:251px}
+ .tile.triple-v .boxContent{ height:211px}
+ .tile.quadro-v{ height:338px}
+ .tile.quadro-v .boxContent{ height:298px}
+ .tile.double-box{ height:164px; width:164px}
+ .tile.double-box .boxContent{ height:164px; width:164px}
+ .tile.triple-box{ height:251px; width:251px}
+ .tile.triple-box .boxContent{ height:251px; width:251px}
+ .tile.triple-double-box{ height:164px; width:251x}
+ .tile.triple-double-box .boxContent{ height:164px; width:251px}
+ .tile.quadro-box{ height:338px; width:338px}
+ .tile.quadro-box .boxContent{ height:338px; width:338px}
+ .tile.quadro-double-box-v{ height:338px; width:164px}
+ .tile.quadro-double-box-v .boxContent{ height:338px; width:164px}
+ .tile.quadro-double-box{ height:164px; width:338px}
+ .tile.quadro-double-box .boxContent{ height:164px; width:338px}
+ 
+ .tile .tilename { min-height: 20px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{font-size:36px; margin-left:.32em; margin-top:16px; display:inline-block; text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:0px; font-size:8pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:2px; margin-right:5px; margin-bottom:5px; margin-left:5px; font-size:12px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+@media (max-width:320px){ 
+ .resimgicon {max-width:32px;height:auto;}
+ .tile .boxContent .resimgicon{ margin-left: .56em; margin-top: .50em;}
+ .tile .tilename, .tile .tilestatus{height:12px}
+ .tile{ width:67px;  height:67px}
+ .tile.double{ width:144px}
+ .tile.double .boxContent{ width:144px}
+ .tile.triple{ width:221px}
+ .tile.triple .boxContent{ width:221px}
+ .tile.quadro{ width:298px}
+ .tile.quadro .boxContent{ width:298px}
+ .tile.double-v{ height:144px}
+ .tile.double-v .boxContent{ height:144px}
+ .tile.triple-v{ height:221px}
+ .tile.triple-v .boxContent{ height:181px}
+ .tile.quadro-v{ height:298px}
+ .tile.quadro-v .boxContent{ height:258px}
+ .tile.double-box{ height:144px; width:144px}
+ .tile.double-box .boxContent{ height:144px; width:144px}
+ .tile.triple-box{ height:221px; width:221px}
+ .tile.triple-box .boxContent{ height:221px; width:221px}
+ .tile.triple-double-box{ height:144px; width:221px}
+ .tile.triple-double-box .boxContent{ height:144px; width:221px}
+ .tile.quadro-box{ height:298px; width:298px}
+ .tile.quadro-box .boxContent{ height:298px; width:298px}
+ .tile.quadro-double-box-v{ height:298px; width:144px}
+ .tile.quadro-double-box-v .boxContent{ height:298px; width:144px}
+ .tile.quadro-double-box{ height:144px; width:298px}
+ .tile.quadro-double-box .boxContent{ height:144px; width:298px}
+ 
+ .tile .tilename { min-height: 20px;}
+ .tile .boxContent{ padding:5px 10px}
+ .tile.icon .boxContent img{ width:10px;  height:10px;  margin-left:-14px;  margin-top:-22px}
+ .tile.iconmain .boxContent i{font-size:36px; margin-left:.22em; margin-top:12px; display:inline-block; text-decoration:inherit}
+ .tile .tilename .name{ margin-left:5px; margin-bottom:0px; font-size:8pt}
+ .tile .tilename .icon{width:12px; height:12px; margin-top:2px; margin-right:5px; margin-bottom:5px; margin-left:5px; font-size:12px}
+ .tile .tilename .text{ left:40px;  right:40px;  font-size:8pt}
+}
+
+/*Colors*/
+.TLightRed{background-color:#E51400}
+.TLightOrange{background-color:#FE8300}
+.TOrange{background-color:#FD5C04}
+.TRed{background-color:#BD0000}
+.TBrown{background-color:#7D6058}
+.TLightPurple{background-color:#E86EB2}
+.TDarkPurple{background-color:#8D0196}
+.TLightBlue{background-color:#5FCDCB}
+.TBlue{background-color:#1673D2}
+.TDarkBlue{background-color:#0849B1}
+.TFacebookBlue{background-color:#3B5D9C}
+.TTwitterBlue{background-color:#59D5E6}
+.TThumblrBlue{background-color:#2A4866}
+.TLinkedinBlue{background-color:#1477AC}
+.TDribbblePink{background-color:#F26097}
+.TTurquise{background-color:#5FCDCB}
+.TLightGrey{background-color:#E0E0E0}
+.TGrey{background-color:#BBB}
+.TDarkGrey{background-color:#666}
+.TLightGreen{background-color:#74E800}
+.TGreen{background-color:#00A300}
+.TDarkGreen{background-color:#008A00}
+.TBlack{background-color:#000}
+.TWhite{background-color:#fff}
+
