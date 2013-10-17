@@ -24,8 +24,6 @@ if(!empty($_REQUEST))
 	$Message = trim($postObj['Message']);
 	$token = $postObj['token'];
 	$version = $postObj['version'];
-	
-    
 
 	if(!empty($fromUsername) && !empty($toUsername))
 	{
@@ -82,7 +80,6 @@ function parseStr($info,$type,$flag=0)
 	{
 		$str.="<Content><![CDATA[".$info['content']."]]></Content>";
 	}
-	$str.="<FuncFlag>".$flag."</FuncFlag></xml>";
 	$sid=intval($info['id']);
 	if($sid>0)
 	{

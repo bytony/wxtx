@@ -2,7 +2,7 @@
 <div id="flk" class="y">
 <p>
 <a href="http://www.wxtx8888.com" >微信天下</a><span class="pipe">|</span><a href="http://www.wxtx8888.com" >微信接口</a><span class="pipe">|</span><a href="forum.php?mobile=yes" >手机版</a><span class="pipe">|</span><a href="archiver/" >Archiver</a><span class="pipe">|</span><strong><a href="http://www.wxtx8888.com" target="_blank">微信接口</a></strong>
-( <a href="http://www.miitbeian.gov.cn/" target="_blank">苏ICP备12079366号-1</a> )</p>
+( <a href="http://www.miitbeian.gov.cn/" target="_blank">浙ICP备13029024号-1</a> )</p>
 <p class="xs0">
 GMT+8, 2013-3-14 22:03<span id="debuginfo">
 , Processed in 0.008471 second(s), 4 queries.

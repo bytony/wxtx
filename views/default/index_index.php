@@ -69,10 +69,9 @@ $(document).ready(function(){
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">管理</a></li>
-                        <li><a href="blog.html">论坛交流</a></li>
-                        <li><a href="http://<?php echo $_SERVER['SERVER_NAME'];?>/bbs/member.php?mod=logging&action=login">登录</li>
-                        <li><a href="http://<?php echo $_SERVER['SERVER_NAME'];?>/bbs/member.php?mod=register">立即注册</a></li>
+                        <li><a href="http://<?php echo $_SERVER['SERVER_NAME'];?>/index.php?con=user&act=app&wxid=<?php   echo $_SESSION['im61']['current_weixin_id'];?>">管理</a></li>
+                        <li><a href="http://<?php echo $_SERVER['SERVER_NAME'];?>/bbs">论坛交流</a></li>
+                        <li><a href="http://<?php echo $_SERVER['SERVER_NAME'];?>/bbs/member.php?mod=logging&action=login">登录</li>  
                     </ul>
                 </div><!-- end nav -->
              </div><!-- end menu-container -->
@@ -84,45 +83,13 @@ $(document).ready(function(){
     <div class="banner">
     	<div class="banner_container">
             <div id="banner_rotator">
-                <div class="banner-content-left">
-                    <div class="banner-title">
-                            微行天下
-                            <br />
-                            您身边的微信专家
-                    </div>
-                <h5> 微行天下 </h5>
-                    <ul>
-                        <li> 丰富的微网站模板</li>
-                        <li> Vel scelerisque nisl consectetur et.</li>
-                        <li> Donec sed odio dui etiam porta sem.</li>
-                    </ul>
-                    <div class="primary_btn">
-                        <a href="http://<?php echo $_SERVER['SERVER_NAME'];?>/index.php?act=inter" class="italic">立即配置</a>
-                    </div>
-                </div><!-- End banner-2 -->
+
                 
                 <div class="banner-content-left">
                     <div class="banner-title">
                             微行天下
                             <br />
                             微网站
-                    </div>
-                <h5> 微行天下 </h5>
-                    <ul>
-                        <li> Praesent commodo cursus magna.</li>
-                        <li> Vel scelerisque nisl consectetur et.</li>
-                        <li> Donec sed odio dui etiam porta sem.</li>
-                    </ul>
-                    <div class="primary_btn">
-                        <a href="http://<?php echo $_SERVER['SERVER_NAME'];?>/index.php?act=inter" class="italic">立即配置</a>
-                    </div>
-                </div><!-- End banner-1 -->
-                
-                <div class="banner-content-left">
-                    <div class="banner-title">
-                            Best Mobile App 
-                            <br />
-                            2013 winner
                     </div>
                 <h5> 微行天下 </h5>
                     <ul>
@@ -142,18 +109,6 @@ $(document).ready(function(){
                     <div class="carousel-feature"><a href="#"><img alt="" src="static/theme/default/images/iphone_ban_2.png" class="carousel-image" /></a></div>
                     <div class="carousel-feature"><a href="#"><img alt="" src="static/theme/default/images/iphone_ban_3.png" class="carousel-image" /></a></div>
                 </div>
-                <div id="ratings">
-                    <div class="stars">
-                        <div class="one-star"></div>
-                        <div class="one-star"></div>
-                        <div class="one-star"></div>
-                        <div class="one-star"></div>
-                        <div class="half-star"></div>
-                    </div>
-                    <div class="rating-text">
-                        <a href="#">Absolutely Stunning!, – Mobileapp.com</a>
-                    </div>
-                </div><!-- End ratings -->
             </div><!-- End phone -->
         </div><!-- End wrap -->     
     </div>

@@ -1,9 +1,9 @@
 <?php if(!defined('IN_DISCUZ')) exit('Access Denied'); hookscriptoutput('discuz');
 0
-|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/header.htm', 1378620969, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
-|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/footer.htm', 1378620969, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
-|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/header_common.htm', 1378620969, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
-|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/pubsearchform.htm', 1378620969, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
+|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/header.htm', 1382001781, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
+|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/footer.htm', 1382001781, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
+|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/header_common.htm', 1382001781, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
+|| checktplrefresh('./template/default/forum/discuz.htm', './template/default/common/pubsearchform.htm', 1382001781, 'diy', './data/template/1_diy_forum_discuz.tpl.php', './template/default', 'forum/discuz')
 ;?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

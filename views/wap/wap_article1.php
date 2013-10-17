@@ -11,7 +11,7 @@
 </head> 
 
 <body id="news2">
-<?php include bidcms_template('widget_cate','views/wap');
+<?php //include bidcms_template('widget_cate','views/wap');
  
 ?>
 <div class="Listpage">
