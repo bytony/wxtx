@@ -20,7 +20,7 @@ if($tid){
 	$filename="weixinhtml/ac{$ac}tid{$tid}page{$page}c{$c}.html"; 
 	if($w=='2'){
 		mk_dir("weixinhtml");
-		$html = vcurll("http://wxtx8888.com//index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
+		$html = vcurll("http://127.0.0.1//index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
 		$html = preg_replace(array ("'index.php\?ac='si"),array($baseurl."?ac="),$html);
 		if(strlen($html)>300){
 			$fp = @fopen($filename, 'w'); 
@@ -39,7 +39,7 @@ if($tid){
 	}
 	if($w=='1'){
 		mk_dir("weixinhtml");
-		$html = vcurll("http://wxtx8888.com/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
+		$html = vcurll("http://127.0.0.1/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
 		$html = preg_replace(array ("'index.php\?ac='si"),array($baseurl."?ac="),$html);
 		if(strlen($html)>300){
 			$fp = @fopen($filename, 'w'); 
@@ -58,7 +58,7 @@ if($tid){
 	if($k==""){
 		mk_dir("weixinhtml");
 		if(!file_exists($filename)){
-			$html = vcurll("http://wxtx8888.com/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
+			$html = vcurll("http://127.0.0.1/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
 			$html = preg_replace(array ("'index.php\?ac='si"),array($baseurl."?ac="),$html);
 			if(strlen($html)>300){
 				$fp = @fopen($filename, 'w'); 
@@ -80,7 +80,7 @@ if($tid){
 		}else{
 			$a=time()-filemtime($filename);
 			if($a>86400){
-				$html = vcurll("http://wxtx8888.com/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
+				$html = vcurll("http://127.0.0.1/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
 				$html = preg_replace(array ("'index.php\?ac='si"),array($baseurl."?ac="),$html);
 					if(strlen($html)>300){
 						$fp = @fopen($filename, 'w'); 
@@ -113,7 +113,7 @@ if($tid){
 			
 		}
 	}else{
-	$html = vcurll("http://wxtx8888.com/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
+	$html = vcurll("http://127.0.0.1/index.php?ac=$ac&tid=$tid&page=$page&c=$c&k=$k","","","");
 	$html = preg_replace(array ("'index.php\?ac='si"),array($baseurl."?ac="),$html);
 	}
 	
@@ -213,13 +213,13 @@ class wechatCallbackapiTest
         		$token = TOKEN;
 				$Message = trim($Message);
 				if(function_exists('curl_init')){
-				$resultStr = $this->vcurl("http://wxtx8888.com/api.php","fromUsername=$fromUsername&toUsername=$toUsername&Message=$Message&Location_X=$Location_X&Location_Y=$Location_Y&Scale=$Scale&Label=$Label&PicUrl=$PicUrl&MsgType=$MsgType&MsgId=$MsgId&Url=$Url&Event=$Event&Latitude=$Latitude&Longitude=$Longitude&Precision=$Precision&EventKey=$EventKey&token=$token&vision=2");
+				$resultStr = $this->vcurl("http://127.0.0.1/api.php","fromUsername=$fromUsername&toUsername=$toUsername&Message=$Message&Location_X=$Location_X&Location_Y=$Location_Y&Scale=$Scale&Label=$Label&PicUrl=$PicUrl&MsgType=$MsgType&MsgId=$MsgId&Url=$Url&Event=$Event&Latitude=$Latitude&Longitude=$Longitude&Precision=$Precision&EventKey=$EventKey&token=$token&vision=2");
 				}else if(function_exists('file_get_contents')){
 				$context = array();   
 				$context['http'] = array ('method' => 'POST','content' =>"fromUsername=$fromUsername&toUsername=$toUsername&Message=$Message&Location_X=$Location_X&Location_Y=$Location_Y&Scale=$Scale&Label=$Label&PicUrl=$PicUrl&MsgType=$MsgType&MsgId=$MsgId&Url=$Url&Event=$Event&Latitude=$Latitude&Longitude=$Longitude&Precision=$Precision&EventKey=$EventKey&token=$token&vision=2");    
-				$resultStr = file_get_contents("http://wxtx8888.com/api.php", false, stream_context_create($context)); 
+				$resultStr = file_get_contents("http://127.0.0.1/api.php", false, stream_context_create($context)); 
 				}else if(function_exists('fsockopen')){
-					$resultStr = $this->HTTP_Post("http://wxtx8888.com/api.php","fromUsername=$fromUsername&toUsername=$toUsername&Message=$Message&Location_X=$Location_X&Location_Y=$Location_Y&Scale=$Scale&Label=$Label&PicUrl=$PicUrl&MsgType=$MsgType&MsgId=$MsgId&Url=$Url&Event=$Event&Latitude=$Latitude&Longitude=$Longitude&Precision=$Precision&EventKey=$EventKey&token=$token&vision=2");
+					$resultStr = $this->HTTP_Post("http://127.0.0.1/api.php","fromUsername=$fromUsername&toUsername=$toUsername&Message=$Message&Location_X=$Location_X&Location_Y=$Location_Y&Scale=$Scale&Label=$Label&PicUrl=$PicUrl&MsgType=$MsgType&MsgId=$MsgId&Url=$Url&Event=$Event&Latitude=$Latitude&Longitude=$Longitude&Precision=$Precision&EventKey=$EventKey&token=$token&vision=2");
 				}
 				echo $resultStr;
          }

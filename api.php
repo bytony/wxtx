@@ -29,10 +29,10 @@ if(!empty($_REQUEST))
 
 	if(!empty($fromUsername) && !empty($toUsername))
 	{
-		$uinfo=mysql_fetch_array(mysql_query("select uid,id,text_count,free_count,image_count,audio_count,price_count,given_count,weixin_num,weixin_home,weixin_avatar,weixin_name,weixin_user_api,vip_level from `".$bidcmstable_prefix."user_weixin` where weixin_id='".$toUsername."'"));
-		$uid=$uinfo['id'];
-		$randKeywords['content']="http://wxtx8888.com/index.php?con=wap&act=index&id=".$uinfo['id'];
-		parseStr($randKeywords,'text');
+		$uinfo=mysql_fetch_array(mysql_query("select uid,id,weixin_id,text_count,free_count,image_count,audio_count,price_count,given_count,weixin_num,weixin_home,weixin_avatar,weixin_name,weixin_user_api,vip_level from `".$bidcmstable_prefix."user_weixin` where weixin_id='".$toUsername."'"));
+		//$randKeywords['content']="http://wxtx8888.com/index.php?con=wap&act=index&id=".$uinfo['id'];
+		 
+		parseStr($uinfo,'news');
 	}
 		
 }
@@ -41,38 +41,33 @@ function parseStr($info,$type,$flag=0)
 	global $bidcmstable_prefix,$Message,$uid,$uinfo,$postObj;
 	$infotype=$type=='lbs'?'news':$type;
 	$str="<xml><ToUserName><![CDATA[".$postObj['fromUsername']."]]></ToUserName><FromUserName><![CDATA[".$postObj['toUsername']."]]></FromUserName><CreateTime>".time()."</CreateTime><MsgType><![CDATA[".$infotype."]]></MsgType>";
+    
 	if($type=='music')
 	{
 		$str.="<Music><Title><![CDATA[".$info['title']."]]></Title><Description><![CDATA[".$info['content']."]]></Description><MusicUrl><![CDATA[".$info['music']."]]></MusicUrl><HQMusicUrl><![CDATA[".$info['hq_music']."]]></HQMusicUrl></Music>";
 	}
 	elseif($type=='news')
 	{
-		$ext_info[0]=$info;
+		//var_dump($info);
 		//检查是否有多图文
-		if(!empty($info['ext_info']))
-		{
-			$query=mysql_query("select * from `".$bidcmstable_prefix."info` where id in (".$info['ext_info'].")");
-			while($rs=mysql_fetch_array($query))
-			{
-				$ext_info[]=$rs;
-			}
-			
-		}
-		$str.="<ArticleCount>".count($ext_info)."</ArticleCount> <Articles>";
-		foreach($ext_info as $k=>$einfo)
-		{
-			$url=!empty($einfo['url'])?$einfo['url']:'http://wxtx8888.com/?con=wap&act=item&id='.$einfo['id'];
-			$einfo['url']=createUrl($url);
-			$str.="<item> <Title><![CDATA[".$einfo['title']."]]></Title><Description><![CDATA[".$einfo['intro']."]]></Description> <PicUrl><![CDATA[".$einfo['face']."]]></PicUrl> <Url><![CDATA[".$einfo['url']."]]></Url></item>";
-		}
+	
+	$str.="<ArticleCount>1</ArticleCount> <Articles>";
+		
+ 
+			$url=!empty($einfo['url'])?$einfo['url']:'http://wxtx8888.com/index.php?con=wap&act=index&wx_id='.$info['weixin_id'];
+
+			$str.="<item> <Title><![CDATA[点击查看首页]]></Title><Description><![CDATA[点击查看首页]]></Description> <PicUrl><![CDATA[".$info['weixin_avatar']."]]></PicUrl> <Url><![CDATA[".$url."]]></Url></item>";
+		
 		$str.="</Articles>";
+
 	}
+
 	elseif($type=='lbs')
 	{
 		$str.="<ArticleCount>".count($info)."</ArticleCount> <Articles>";
 		foreach($info as $k=>$einfo)
 		{
-			$url='http://wxtx8888.com/?pluginid=lbs&con=wap&act=item&id='.$einfo['id'];
+			$url='http://wxtx8888.com/?pluginid=lbs&con=wap&act=item&wx_id='.$einfo['id'];
 			$einfo['url']=createUrl($url);
 			$str.="<item> <Title><![CDATA[".$einfo['title']."]]></Title><Description><![CDATA[".$einfo['content']."]]></Description> <PicUrl><![CDATA[".$einfo['logo']."]]></PicUrl> <Url><![CDATA[".$einfo['url']."]]></Url></item>";
 		}

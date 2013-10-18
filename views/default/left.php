@@ -16,13 +16,13 @@
 <li rel="picplayer"> <a href="index.php?con=picplayer">首页幻灯片设置</a> </li>
 
 <div class="nav-header">推广活动</div>
-<li rel="usercard"> <a href="index.php?pluginid=vote">投票</a> </li>
-<li rel="coupon"> <a href="index.php?pluginid=coupon">优惠券</a> </li>
-<li class="guagua"> <a href="index.php?pluginid=guagua">刮刮卡</a> </li>
+<li rel="vipcard"> <a href="index.php?con=user&act=vipcard">会员卡</a> </li>
+<li rel="coupon"> <a href="index.php?pluginid=coupon">优惠活动</a> </li>
+<!-- <li class="guagua"> <a href="index.php?pluginid=guagua">刮刮卡</a> </li> -->
 <li class="lottery"> <a href="index.php?pluginid=zhuanpan">幸运大转盘</a> </li>
-<li class="lottery"> <a href="index.php?pluginid=lbs">LBS商家管理</a> </li>
+<!-- <li class="lottery"> <a href="index.php?pluginid=lbs">LBS商家管理</a> </li> -->
 <li class="lottery"> <a href="index.php?pluginid=order">生活服务预订</a> </li>
-<li class="lottery"> <a href="index.php?pluginid=hotel">酒店预订</a> </li>
+<!-- <li class="lottery"> <a href="index.php?pluginid=hotel">酒店预订</a> </li> -->
 
 </ul>
 <script type="text/javascript">

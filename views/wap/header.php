@@ -5,5 +5,5 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
-<link href="views/wap/css/common.css" rel="stylesheet" type="text/css" />
+<link href="views/wap/css/common.css" rel="stylesheet" type="text/css" /> 
 <script src="views/wap/js/iscroll.js" type="text/javascript"></script>

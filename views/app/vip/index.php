@@ -57,7 +57,7 @@
                 </div>
                 <div class="card">
                     <div class="card-side sideA" style="background:url('images/vip-bg03.png'); background-size:100%">
-                        <div class="card-name">杭州卡迪娱乐</div>
+                        <div class="card-name">金都美容</div>
                         <img class="card-logo" src="images/c87fee531771b5612a1899bdd8d23517_248_122.png" width="88" height="88" />
                         <div class="card-no">No.10000064</div>
                     </div>

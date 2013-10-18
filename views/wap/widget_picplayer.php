@@ -3,7 +3,7 @@
 <style type="text/css">
 /*iscroll*/
 .banner {	width:320px;	margin:0 auto;	padding:0;	background-color: #333333;}
-#wrapper {	margin:0;	width:320px;	height:auto;	float:left;	position:relative;	
+#wrapper {	margin:0;	width:320px;	height:200px;	float:left;	position:relative;	
 /* On older OS versions "position" and "z-index" must be defined, */	
 z-index:1;			
 /* it seems that recent webkit is less picky and works anyway. */	
@@ -12,7 +12,7 @@ overflow:hidden;
 #scroller{-webkit-transition-property: -webkit-transform; -webkit-transform-origin-x: 0px; -webkit-transform-origin-y: 0px; -webkit-transition-duration: 0ms; -webkit-transform: translate3d(-640px, 0px, 0px) scale(1);width:1600px;height:auto;float:left;padding:0;}
 
 #scroller ul {	list-style:none;	display:block;	float:left;	width:100%;	height:auto;	padding:0;	margin:0;	text-align:left;}
-#scroller li {		display:block; float:left;	width:320px; height:auto;	text-align:center;	font-size:0px;	padding:0;	position:relative;}
+#scroller li {		display:block; float:left;	width:320px; height:200px;	text-align:center;	font-size:0px;	padding:0;	position:relative;}
 #scroller li a{		display:block;	padding:0;	margin:0;}
 #scroller li p{	position:absolute;	z-index:2;	display:block;	width:100%;	bottom:0;	background-color:rgba(0, 0, 0, 0.5);	color:#F4F4F4;	font-size:14px;	text-indent: 55px;	line-height:24px;	text-align: left;    text-indent: 10px;    text-overflow: ellipsis;    white-space: nowrap;	padding:0;	margin:0;}
 #nav {	float: right;    margin-top: -15px;    padding: 0;    position: relative;    width: auto;    z-index: 3;}
@@ -23,7 +23,7 @@ overflow:hidden;
 #indicator > li {	text-indent:-9999em;	width:8px; height:8px;	-webkit-border-radius:4px;	-moz-border-radius:4px;	-o-border-radius:4px;	border-radius:4px;	background:#888;	overflow:hidden;	margin-right:4px;}
 #indicator > li.active {	background:#DDDDDD;}
 #indicator > li:last-child {	margin:0;}
-#scroller li img{ width:320px; height:auto;}
+#scroller li img{ width:320px; height:200px;}
 </style>
 <div class="banner">
 <div id="wrapper">

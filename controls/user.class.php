@@ -187,7 +187,7 @@ class user_controller
 	function app_action()
 	{
 		global $db,$_G;
-		$pagetitle='61微信公众号功能列表';
+		$pagetitle='微信公众号功能列表';
 		
 		if(empty($this->weixinid))
 		{
@@ -793,7 +793,7 @@ class user_controller
 	{
 		$current='cate';
 		global $db,$_G;
-		$pagetitle='61微信公众号信息';
+		$pagetitle='微信公众号信息';
 		if(empty($this->weixinid))
 		{
 			sheader('index.php?con=user',3,'请先选择一个微信进行操作');
@@ -823,7 +823,7 @@ class user_controller
 	{
 		$current='cate';
 		global $db,$_G;
-		$pagetitle='61微信公众号分类管理';
+		$pagetitle='微信公众号分类管理';
 		if(empty($this->weixinid))
 		{
 			sheader('index.php?con=user',3,'请先选择一个微信进行操作');
@@ -843,7 +843,7 @@ class user_controller
 		
 		global $db,$_G;
 		$current='cate';
-		$pagetitle='61微信公众号分类管理';
+		$pagetitle='微信公众号分类管理';
 		if(empty($this->weixinid))
 		{
 			sheader('index.php?con=user',3,'请先选择一个微信进行操作');
@@ -925,6 +925,24 @@ class user_controller
 		else
 		{
 			include bidcms_template('user_manage_template');
+		}
+	}
+	function vipcard_action()
+	{
+		global $db,$_G;
+		$current='vipcard';
+		$pagetitle='会员卡';
+		if(empty($this->weixinid))
+		{
+			sheader('index.php?con=user',3,'请先选择一个微信进行操作');
+		}
+		$winfo=$this->winfo;
+		//var_dump($winfo);
+		$uid=$GLOBALS['bidcms_uid'];
+		
+		$info=$db->fetch_first("select * from ".tname('weixin_template')." where weixin_id='".$this->weixinid."'");
+		{
+		include bidcms_template('user_vip_card');
 		}
 	}
 

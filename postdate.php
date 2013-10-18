@@ -1,20 +1,22 @@
 <?php
 
-$url = "http://127.0.0.1/userapi/wxapi.php";//接收XML地址
-//$url = "http://wxtx8888.com/userapi/wxapi.php";
-//$url = "http://127.0.0.1/userapi/wx_sample.php";//接收XML地址
+$url = "http://127.0.0.1/wxapi.php";//接收XML地址
+
 //$header = "Content-type: text/xml";//定义content-type为xml
+
 $xml_data= "<xml>
  <ToUserName><![CDATA[gh_423dwjkeww3]]></ToUserName>
- <FromUserName><![CDATA[gh_423dwjkeww3324]]></FromUserName> 
+ <FromUserName><![CDATA[gh_423dwjkeww3]]></FromUserName> 
  <CreateTime>1348831860</CreateTime>
  <MsgType><![CDATA[text]]></MsgType>
- <Content><![CDATA[主页]]></Content>
+ <Content><![CDATA[vip]]></Content>
  <MsgId>1234567890123456</MsgId>
  </xml>"; 
+
+
 //var_dump($post_data);
 
-		$header[] = "Content-type: text/xml";//定义content-type为xml
+		 $header[] = "Content-type: text/xml";//定义content-type为xml
         $ch = curl_init(); //初始化curl
         curl_setopt($ch, CURLOPT_URL, $url);//设置链接
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//设置是否返回信息
@@ -27,4 +29,5 @@ $xml_data= "<xml>
         }
          curl_close($ch); //关闭curl链接
         echo  $response;
+
 ?>

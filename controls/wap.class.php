@@ -187,6 +187,15 @@ class wap_controller
 			include bidcms_template($template,'views/wap');
 		}
 	}
+	
+
+	function vipcard_action()
+	{
+		
+		$template='wap_vipcard';
+		include bidcms_template($template,'views/wap');
+	}
+
 	/*------------------------------------------------*/
 	
 }

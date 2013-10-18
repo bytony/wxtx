@@ -1,27 +1,67 @@
 
 #cate2{
-	background: url(../img/bg004.jpg) #E2E3E6;
+	/* background: url(../img/bg004.jpg) #E2E3E6; */
 	background-size:256px auto;
  	overflow-x: hidden;
 
 }
 .item {
-width: 48%;
+width: 31.6%;
 display: block;
-padding: 1%;
+/* padding: 1%; */
 background: inherit;
 border: none;
-height: 78px;
+height: 120px;
 float: left;
 background: #00CCFF;
+border-radius: 3%; 
+margin: 0.8% ;
+text-align: right;
+position: relative;
 }
 
 .item-title {
-font-size: 30px;
+font-size: 20px;
+height: 18px;
 color: rgb(255, 255, 255);
+position: absolute;
+
+bottom: 8px;
+right: 8px; 
+}
+
+.item-context {
+text-align: center;
+font-size: 20px;
+height: 39px;
+color: rgb(255, 255, 255);
+font-weight: bold;
+/* margin-top: 20px; */
+width: 50px;
 }
 
 ._C0 {
-height: 156px;
-background: #FC5F56;
+background: #fa4393;
+}
+
+._C1,._C5 {
+width: 65%;
+}
+
+._C1 .item-context,._C5 .item-context {
+width: 100%;
+margin-top: 30px;
+}
+
+
+._C2,._C4 {
+background: #fba8e0;
+}
+
+._C3 {
+background: #ffcef1;
+}
+
+._C6 {
+background: #fb9a39;
 }
