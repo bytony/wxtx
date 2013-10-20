@@ -936,14 +936,46 @@ class user_controller
 		{
 			sheader('index.php?con=user',3,'请先选择一个微信进行操作');
 		}
-		$winfo=$this->winfo;
-		//var_dump($winfo);
-		$uid=$GLOBALS['bidcms_uid'];
-		
-		$info=$db->fetch_first("select * from ".tname('weixin_template')." where weixin_id='".$this->weixinid."'");
-		{
-		include bidcms_template('user_vip_card');
-		}
+		if($_GET['tel'])
+		{	
+			if ($_GET['rank']=='年卡'){
+
+			$rank = '"'.$_GET['rank'].'"';
+			$db->query("update ".tname('user_vip_card')." set weixin_open_rank=".$rank.",weixin_open_times=12 where weixin_open_tel='".$_GET['tel']."'");
+			}
+			else if($_GET['rank']=='半年卡')
+				{
+
+			$rank = '"'.$_GET['rank'].'"';
+			$db->query("update ".tname('user_vip_card')." set weixin_open_rank=".$rank.",weixin_open_times=6 where weixin_open_tel='".$_GET['tel']."'");
+			}
+
+			else if(($_GET['tel'])&&($_GET['times']))
+			{	 
+			$db->query("update ".tname('user_vip_card')." set weixin_open_times=".$_GET['times']." where weixin_open_tel='".$_GET['tel']."'");
+			} 
+		} 
+ 		
+
+			$weixinid=$_SESSION['im61']['current_weixin_id'];
+			$info=$db->query("select * from ".tname('user_vip_card')." where weixin_id='".$this->weixinid."'");
+		 
+
+			if(!$info) {
+				$db->query('insert into '.tname('user_vip_card').'(weixin_id) values("'.$this->weixinid.'")');
+			   
+			}
+			else{
+			while($rows=$db->fetch_array($info))
+			{
+				$catelist[]=$rows;
+			}
+				
+	         
+			}
+			{
+			include bidcms_template('user_vip_card');
+		 }
 	}
 
 	function _insertKey($data,$updateid,$db)

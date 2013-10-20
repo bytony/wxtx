@@ -190,10 +190,50 @@ class wap_controller
 	
 
 	function vipcard_action()
-	{
+	{ global $db;	
+
+		if (!$_POST)
+		{
+				$weixin_id = $_GET['wx_id'];
+				$winfo = $db->fetch_first("select * from".tname('user_weixin')."where weixin_id='".$weixin_id."'");
+			 
+			if(!$_COOKIE["name"]){
+				
+			
+				$template ='wap_vipcard';
+				include bidcms_template($template,'views/wap');
+				}else{
+
+				$tel = $_COOKIE['tel'];
+				$vipinfo = $db->fetch_first("select * from".tname('user_vip_card')."where weixin_open_tel='".$tel."'");
+				if ($vipinfo['weixin_open_rank'] ==''){
+					$template ='wap_vipcardcont';
+					include bidcms_template($template,'views/wap');
+				} elseif (($vipinfo['weixin_open_rank'] =='年卡')||($vipinfo['weixin_open_rank'] =='半年卡')) {
+					$template ='wap_vipcardse';
+					include bidcms_template($template,'views/wap');
+				}
+				}
 		
-		$template='wap_vipcard';
-		include bidcms_template($template,'views/wap');
+		} else 
+		{    global $db;
+			 $weixin_id = $_POST['wx_id'];
+			 $weixin_open_tel = $_POST['viptel'];
+			 $weixin_open_name = "'".$_POST['vipname']."'";
+
+					$winfo = $db->fetch_first("select * from".tname('user_vip_card')."where weixin_open_tel='".$weixin_open_tel."'");
+			    	if($winfo) {
+			    	echo "您的手机号码已领取过会员卡";
+
+			        }
+			    	else{
+		  $sql="insert into ".tname('user_vip_card')."( weixin_open_tel ,weixin_id,weixin_open_name) values(".$weixin_open_tel.",'".$weixin_id."',".$weixin_open_name.")"; 
+		  
+		  }
+		  $db->query($sql);
+		setcookie("tel",$weixin_open_tel, time()+3600*24*30*12);
+		setcookie("name",$weixin_open_name, time()+3600*24*30*12);
+		}
 	}
 
 	/*------------------------------------------------*/

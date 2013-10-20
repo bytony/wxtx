@@ -4,16 +4,16 @@ $post_data='{
      "button":[
      {  
           "type":"view",
-          "name":"剩余次数",
-          "url":"http://wxtx8888.com/views/app/vip/"
+          "name":"我是VIP",
+          "url":"http://wxtx8888.com/index.php?con=wap&act=vipcard&wx_id=gh_afcb2af9dfe1"
       },
       {
            "type":"view",
-           "name":"会员卡",
-           "url":"http://wxtx8888.com/views/app/vip/"
+           "name":"主页",
+           "url":"http://wxtx8888.com/index.php?con=wap&act=index&wx_id=gh_afcb2af9dfe1"
       },
       {
-           "name":"关于我们",
+           "name":"更多",
            "sub_button":[
             {
                "type":"view",
@@ -39,7 +39,7 @@ $post_data='{
        }]
  }';
   
-    $url = "api.weixin.qq.com/cgi-bin/menu/create?access_token=T9aNsQ726eh0gG50YGJA0ETSKeh71QhqXYkmfE4sj0BUXYrmYeDcSj1i41Tu0lNtr2l8svy_awQv4jl13fAV_YsXPXup2xdC6-8775D4dtJVGKpb0ypuUo4nMwfZ5v94NtYmeNi7WeQiwACJbCfSLA";//接收XML地址
+    $url = "api.weixin.qq.com/cgi-bin/menu/create?access_token=6ifgUskw_Wywfw-DdvvC3VWPf2Fzi28QRlZnesc18p2RRcNSAKw2FcI3qkEZCI-9NxqaNaSU3qBmuc_myfjP2IuMIKy7wK8neYaFLWeFoJ4_cmU3HiJb33apCZ_iFpE5aZVs1U2bzwO4UOaACLlfpA";
     //$url = "127.0.0.1/wxapi.php";
     //$post_data = '12';
     $ch = curl_init();  

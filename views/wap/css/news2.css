@@ -6,6 +6,7 @@
 #cate1 .mainmenu li a {display:block;padding:0px;font-size:14px;color:#000000;text-decoration:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;}
 #cate1 .mainmenu li .menubtn .menumesg {padding:0px
 }
+#news2 .text img{width:100%; height:auto;margin: 5px auto;}
 #cate1 .mainmenu li .menubtn .menuimg {height:81px;overflow:hidden;border-radius:5px 5px 0 0;background-color:#F5F5F5;}
 #cate1 .mainmenu li div img {border:0;width:100%;border-radius:5px 5px 0 0;}
 #cate1 .mainmenu li .menutitle {text-align:center;padding:5px;text-decoration:none;color:#000;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}

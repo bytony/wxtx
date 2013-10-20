@@ -3,17 +3,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+ <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 
 <script type="text/javascript" src="js/jQueryRotateCompressed.2.2.js"></script>
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <style type="text/css">
-.demo{width:417px; height:417px; position:relative; margin:50px auto}
-#disk{width:417px; height:417px; background:url(disk.jpg) no-repeat}
-#start{width:163px; height:320px; position:absolute; top:60px; left:145px;}
-#start img{cursor:pointer}
+#caibao {background: url('caibao.jpg') repeat;}
+.demo{width:80%; height:auto; position:relative; margin:50px auto;}
+#disk{width:100%; height: 100%;}
+#start{width:40%; height:50%; position:absolute; top:11.2%; left:30.29%;}
+#diskimg{width:100%}
+#msg{width:90%;height:20px;border:1px solid #ff9830; margin: 30px auto; font-size: 14px; text-align: center;padding: 5px;border-radius: 5px;background:#fefeb4;}
+#start img{cursor:pointer; width:100%;}
+#info{width:90%;border:1px solid #ff9830; color: black; margin: 30px auto;font-size: 14px;text-align: left;padding: 5px;border-radius: 5px;background:#fefeb4; }
+#info p {text-indent: 2em;}
+#infotype{width: 65px;height: 20px;border:1px solid #ff9830;}
 </style>
 <script type="text/javascript">
 var prize_arr = [
@@ -82,15 +88,25 @@ function get_rand(proArr) {
 <title>欢乐大转盘</title>
 </head>
 <body>
+
+  
 <div data-role="page">
+	<div  id="caibao">
   <div data-role="header">
     <h1>欢乐大转盘</h1>
   </div>
+  <div id="msg">130****1234号码中了一等奖</div>
   <div data-role="content" class="demo"> 
-    <div id="disk"></div> 
+    <div id="disk"> <img src="disk.jpg" id="diskimg"/>
     <div id="start"><img src="start.png" id="startbtn"></div> 
+	</div>
+  </div>
+  <div id="info">
+  	<div id="infotype">奖项说明:</div>
+	<p>一等奖</p>
   </div>
   <div data-role="footer">
     Power by bytony
+  </div>
   </div>
 </body>

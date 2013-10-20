@@ -138,8 +138,8 @@
             });
 
             $('.alert_title', $alertDialog).html(tilte || '提示');
-            $('.alert_content', $alertDialog).html(text || '这家伙很懒，什么也没留下。');
-
+            $('.alert_content', $alertDialog).html(text || '领取成功');
+            location.replace(document.referrer);
             $alertDialog.popup('open');
         }
 
@@ -169,8 +169,8 @@
             });
 
             $('.confirm_title', $confirmDialog).html(tilte || '请确认');
-            $('.confirm_content', $confirmDialog).html(text || '这家伙很懒，什么也没留下。');
-
+            $('.confirm_content', $confirmDialog).html(text || '领取成功1');
+            //location.replace(document.referrer);
             $confirmDialog.popup('open');
         }
 
@@ -182,18 +182,43 @@
             var marketing_id = $(this).attr('data-marketing-id');           
             var weixin_open_id = $('#cardBox').attr('data-weixin-open-id');
             var vercode = $('#coupon-verbox-'+marketing_id+' input[name="vercode"]').val();
+            var viptel = $('#coupon-verbox-'+marketing_id+' input[name="viptel"]').val();
+            
+            var $_GET = (function(){
+            var url = window.document.location.href.toString();
+            var u = url.split("?");
+            if(typeof(u[1]) == "string"){
+                u = u[1].split("&");
+                var get = {};
+                for(var i in u){
+                    var j = u[i].split("=");
+                    get[j[0]] = j[1];
+                }
+                return get;
+            } else {
+                return {};
+            }
+             })();
+            var wx_id = $_GET['wx_id']
             if(vercode == ''){
             	customAlert('验证码不能为空!');
                 return false;
-            }            
+            }  
+            if(viptel.length !=11){
+                customAlert('手机号码必须为11位!');
+                return false;
+            }                
             var submitdata = {
             	type: 2,
             	marketing_id: marketing_id,
             	weixin_open_id: weixin_open_id,
-            	vercode: vercode
+            	vipname: vercode,
+                viptel: viptel,
+                wx_id: wx_id
             };
             $.post(
-            	'/vipcard/use_coupon/',
+            	'http://127.0.0.1/index.php?con=wap&act=vipcard',
+
             	submitdata,
             	function(data){
                     if (data.success == 1) {

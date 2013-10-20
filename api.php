@@ -56,7 +56,7 @@ function parseStr($info,$type,$flag=0)
  
 			$url=!empty($einfo['url'])?$einfo['url']:'http://wxtx8888.com/index.php?con=wap&act=index&wx_id='.$info['weixin_id'];
 
-			$str.="<item> <Title><![CDATA[点击查看首页]]></Title><Description><![CDATA[点击查看首页]]></Description> <PicUrl><![CDATA[".$info['weixin_avatar']."]]></PicUrl> <Url><![CDATA[".$url."]]></Url></item>";
+			$str.="<item> <Title><![CDATA[点击查看微信首页]]></Title><Description><![CDATA[点击查看微信首页]]></Description> <PicUrl><![CDATA[".$info['weixin_avatar']."]]></PicUrl> <Url><![CDATA[".$url."]]></Url></item>";
 		
 		$str.="</Articles>";
 
